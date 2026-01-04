@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindCare - Login</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MindCare</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html" class="active">Login</a></li>
+      <li><a href="tests.html">Tests</a></li>
+      <li><a href="report.html">Report</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Container -->
+  <section class="login-section">
+    <div class="login-card">
+      <h2>Welcome Back</h2>
+      <p class="subtitle">Login to start your Alzheimer’s assessment</p>
+      <form action="auth.js" method="post">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Login</button>
+      </form>
+      <p class="signup-text">Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MindCare | Early Alzheimer’s Detection Portal</p>
+  </footer>
+</body>
+</html>
