@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attention Test | MindCare</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Attention Test</h1>
+    <p class="subtitle">Check your focus with this quick task</p>
+    <nav>
+      <a href="orientation.html">Back</a>
+      <a href="language.html">Next</a>
+    </nav>
+  </header>
+
+  <main class="test-container">
+    <div class="stroop-test" id="stroop-area">
+      <h2 id="stroop-word">Red</h2>
+      <div class="color-buttons">
+        <button data-color="red" style="background:red;"></button>
+        <button data-color="green" style="background:green;"></button>
+        <button data-color="blue" style="background:blue;"></button>
+        <button data-color="yellow" style="background:yellow;"></button>
+      </div>
+    </div>
+
+    <button id="next-stroop" class="hidden">Next</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindCare. All rights reserved.</p>
+  </footer>
+
+  <script src="../scripts/attention.js"></script>
+</body>
+</html>

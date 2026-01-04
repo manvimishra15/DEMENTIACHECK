@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mood Survey | MindCare</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mood & Mental Health Survey</h1>
+    <p class="subtitle">A short screening based on PHQ-2</p>
+    <nav>
+      <a href="executive.html">Back</a>
+      <a href="patterns.html">Next</a>
+    </nav>
+  </header>
+
+  <main class="test-container">
+    <form id="moodForm">
+      <div class="question">
+        <h2>1. Little interest or pleasure in doing things?</h2>
+        <select name="q1" required>
+          <option value="">--Select--</option>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+
+      <div class="question">
+        <h2>2. Feeling down, depressed, or hopeless?</h2>
+        <select name="q2" required>
+          <option value="">--Select--</option>
+          <option value="0">Not at all</option>
+          <option value="1">Several days</option>
+          <option value="2">More than half the days</option>
+          <option value="3">Nearly every day</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindCare. All rights reserved.</p>
+  </footer>
+
+  <script src="../scripts/mood.js"></script>
+</body>
+</html>

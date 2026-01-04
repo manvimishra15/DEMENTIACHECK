@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orientation Test</title>
+    <style>
+  /* ===== Improved Embedded CSS ===== */
+
+  /* Global Reset & Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8faff;
+    color: #2c3e50;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  /* Container */
+  .quiz-container {
+    background: #fff;
+    max-width: 720px;
+    width: 100%;
+    padding: 40px 45px 50px;
+    border-radius: 16px;
+    box-shadow:
+      0 2px 8px rgba(43, 108, 176, 0.1),
+      0 10px 20px rgba(43, 108, 176, 0.12);
+    transition: box-shadow 0.3s ease;
+  }
+  .quiz-container:hover {
+    box-shadow:
+      0 6px 20px rgba(43, 108, 176, 0.2),
+      0 15px 40px rgba(43, 108, 176, 0.25);
+  }
+
+  /* Header */
+  header h1 {
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #225086;
+    text-shadow: 0 1px 3px rgba(43,108,176,0.15);
+  }
+
+  header p {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #555e72;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  /* Questions */
+  .question {
+    margin-bottom: 28px;
+  }
+
+  .question p {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #34495e;
+    font-size: 1.125rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* Inputs & Selects */
+  .question input,
+  .question select {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 1.1rem;
+    border: 2px solid #dbe8f6;
+    border-radius: 12px;
+    background-color: #fafcff;
+    color: #1a365d;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    outline-offset: 3px;
+    outline-color: transparent;
+  }
+
+  .question input::placeholder {
+    color: #7a8ba6;
+    font-weight: 400;
+  }
+
+  .question input:focus,
+  .question select:focus {
+    border-color: #2b6cb0;
+    box-shadow: 0 0 10px rgba(43,108,176,0.25);
+    outline-color: #2b6cb0;
+  }
+
+  /* Submit Button */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #2b6cb0, #225086);
+    color: #fff;
+    border: none;
+    padding: 18px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(43,108,176,0.25);
+    transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+  }
+
+  .submit-btn:hover,
+  .submit-btn:focus {
+    background: linear-gradient(90deg, #357cc4, #1e3f6c);
+    box-shadow: 0 12px 30px rgba(43,108,176,0.35);
+    transform: translateY(-3px);
+    outline: none;
+  }
+
+  /* Result Box */
+  #result {
+    margin-top: 32px;
+    padding: 22px 25px;
+    border-radius: 14px;
+    background-color: #e7f0ff;
+    border: 1.5px solid #a6c8ff;
+    font-size: 1.15rem;
+    color: #225086;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: inset 0 0 8px rgba(34,80,134,0.12);
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body {
+      padding: 30px 12px;
+      align-items: stretch;
+    }
+    .quiz-container {
+      padding: 30px 25px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(43,108,176,0.15);
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+    .question p {
+      font-size: 1rem;
+    }
+    .submit-btn {
+      font-size: 1.15rem;
+      padding: 16px 0;
+      border-radius: 12px;
+    }
+  }
+</style>
+
+</head>
+<body>
+    <header>
+        <h1>Orientation Knowledge Test</h1>
+        <p>Answer the following questions to test your awareness!</p>
+    </header>
+
+    <main class="quiz-container">
+        <form id="orientationForm">
+            <!-- Q1 -->
+            <div class="question">
+                <p>1. What is today’s date?</p>
+                <input type="date" id="q1" name="q1" required>
+            </div>
+
+            <!-- Q2 -->
+            <div class="question">
+                <p>2. What time is it right now? (approx)</p>
+                <input type="time" id="q2" name="q2" required>
+            </div>
+
+            <!-- Q3 -->
+            <div class="question">
+                <p>3. In which city are you currently located?</p>
+                <input type="text" id="q3" name="q3" placeholder="Enter city" required>
+            </div>
+
+            <!-- Q4 -->
+            <div class="question">
+                <p>4. What is the season right now in your region?</p>
+                <select id="q4" name="q4" required>
+                    <option value="" disabled selected>--Select--</option>
+                    <option value="Winter">Winter</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Autumn">Autumn</option>
+                </select>
+            </div>
+
+            <!-- Q5 -->
+            <div class="question">
+                <p>5. Which day of the week is it today?</p>
+                <select id="q5" name="q5" required>
+                    <option value="" disabled selected>--Select--</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                    <option>Sunday</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Test</button>
+        </form>
+
+        <div id="result"></div>
+    </main>
+
+    <script src="scripts/orientation.js"></script>
+</body>
+</html>

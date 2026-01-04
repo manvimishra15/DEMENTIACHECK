@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Executive Function | MindCare</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Executive Function Test</h1>
+    <p class="subtitle">Logic & Problem Solving</p>
+    <nav>
+      <a href="language.html">Back</a>
+      <a href="mood.html">Next</a>
+    </nav>
+  </header>
+
+  <main class="test-container">
+    <section class="logic-question">
+      <h2>1. What comes next in the series?</h2>
+      <p>2, 4, 6, 8, ?</p>
+      <input type="number" id="seriesInput" placeholder="Enter your answer" />
+    </section>
+
+    <section class="puzzle-question">
+      <h2>2. Which shape is different?</h2>
+      <div class="shape-puzzle">
+        <img src="../assets/circle.png" alt="Shape 1" />
+        <img src="../assets/circle.png" alt="Shape 2" />
+        <img src="../assets/square.png" alt="Shape 3" />
+        <img src="../assets/circle.png" alt="Shape 4" />
+      </div>
+      <p>Select the odd one out:</p>
+      <select id="oddShapeSelect">
+        <option value="">--Choose--</option>
+        <option value="1">Shape 1</option>
+        <option value="2">Shape 2</option>
+        <option value="3">Shape 3</option>
+        <option value="4">Shape 4</option>
+      </select>
+    </section>
+
+    <button id="submitExecutive">Submit</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindCare. All rights reserved.</p>
+  </footer>
+
+  <script src="../scripts/executive.js"></script>
+</body>
+</html>

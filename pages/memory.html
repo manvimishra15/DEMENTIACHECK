@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Test - MindCare</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">MindCare</div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../login.html">Login</a></li>
+      <li><a href="memory.html" class="active">Tests</a></li>
+    </ul>
+  </nav>
+
+  <!-- Memory Test Section -->
+  <section class="hero">
+    <div class="hero-text" style="text-align: center;">
+      <h1>Memory Test</h1>
+      <p>We will show you a series of words. Try to remember them. You’ll be asked to recall them later.</p>
+      <button id="startMemoryTest" class="btn-primary">Start Test</button>
+    </div>
+  </section>
+
+  <!-- Test Area -->
+  <section class="test-order" id="memoryTestArea" style="display:none;">
+    <h2>Memorize the following words:</h2>
+    <div id="wordList" class="fact-cards"></div>
+    <button id="nextToRecall" class="btn-primary" style="margin-top: 20px; display:none;">Next</button>
+  </section>
+
+  <!-- Recall Section -->
+  <section class="test-order" id="recallArea" style="display:none;">
+    <h2>Type the words you remember:</h2>
+    <textarea id="recallInput" rows="4" placeholder="Type here..." style="width: 80%; padding: 10px;"></textarea>
+    <br><br>
+    <button id="submitRecall" class="btn-primary">Submit</button>
+  </section>
+
+  <footer>
+    &copy; 2025 MindCare | All Rights Reserved
+  </footer>
+
+  <script src="../scripts/memory.js"></script>
+</body>
+</html>

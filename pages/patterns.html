@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Progress & Patterns | MindCare</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Your Cognitive Patterns</h1>
+    <p class="subtitle">Visual summary of test scores</p>
+    <nav>
+      <a href="mood.html">Back</a>
+      <a href="report.html">Report</a>
+    </nav>
+  </header>
+
+  <main class="test-container">
+    <div id="scoreSummary" class="score-summary">
+      <!-- Scores will appear here -->
+    </div>
+
+    <canvas id="chartCanvas" width="400" height="300"></canvas>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindCare. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../scripts/patterns.js"></script>
+</body>
+</html>

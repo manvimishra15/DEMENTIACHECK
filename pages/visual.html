@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visual Tests — MindCare</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="logo">🧠 MindCare</div>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../login.html">Login</a></li>
+      <li><a href="memory.html">Memory</a></li>
+      <li><a href="visual.html" class="active">Visual</a></li>
+      <li><a href="orientation.html">Orientation</a></li>
+    </ul>
+  </nav>
+
+  <main class="hero" style="flex-direction:column;align-items:stretch;">
+    <div class="hero-text" style="text-align:center;">
+      <h1>Visuospatial & Drawing Tests</h1>
+      <p>Clock Drawing & Copy-the-Shape — draw directly on the canvas below.</p>
+    </div>
+
+    <section class="test-order test-section" id="clock-section" aria-labelledby="clock-title">
+      <h2 id="clock-title">Clock Drawing Test</h2>
+      <p>Draw a clock showing <strong id="clock-time"></strong></p>
+
+      <div class="canvas-stack">
+        <!-- face canvas (base) -->
+        <canvas id="clockFace" width="400" height="400" class="canvas-base" aria-hidden="true"></canvas>
+        <!-- user drawing canvas (above) -->
+        <canvas id="clockDraw" width="400" height="400" class="canvas-draw" role="application" aria-label="Draw on the canvas"></canvas>
+      </div>
+
+      <div class="controls">
+        <button id="clearClock" class="btn-secondary">Clear</button>
+        <button id="saveClock" class="btn-primary">Save & Continue to Shape Test</button>
+      </div>
+    </section>
+
+    <section class="test-order test-section" id="shape-section" aria-labelledby="shape-title" style="display:none;">
+      <h2 id="shape-title">Copy the Shapes Test</h2>
+      <p>Copy the reference shape (left) on the big canvas (right).</p>
+
+      <div class="shape-row">
+        <div class="shape-ref">
+          <canvas id="shapeRef" width="220" height="220" class="canvas-ref" aria-hidden="true"></canvas>
+          <div class="ref-label">Reference</div>
+        </div>
+
+        <div class="canvas-stack" style="width:420px;">
+          <canvas id="shapeDraw" width="420" height="420" class="canvas-draw" role="application" aria-label="Draw the shape"></canvas>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="newShape" class="btn-secondary">New Shape</button>
+        <button id="clearShape" class="btn-secondary">Clear</button>
+        <button id="saveShape" class="btn-primary">Save & Continue</button>
+      </div>
+    </section>
+
+    <div style="height:40px"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 MindCare — Screening & support (not a diagnostic tool)</p>
+  </footer>
+
+  <script src="../scripts/visual.js" defer></script>
+</body>
+</html>
